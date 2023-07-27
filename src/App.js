@@ -27,7 +27,7 @@ function App() {
   };
 
   const multiply = () => {
-    setPreviousDigit(digit);
+    if (operator !== "") setPreviousDigit(digit);
     setDigit("*");
     setOperator("*");
   };
@@ -63,6 +63,7 @@ function App() {
       const res = prevNumber * nextNumber;
       setDigit(res);
     }
+    setOperator("");
   };
 
   const ac = () => {
